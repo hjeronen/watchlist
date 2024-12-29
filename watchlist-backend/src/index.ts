@@ -4,6 +4,8 @@ import { PORT } from './utils/config';
 import express from 'express';
 const app = express();
 app.use(express.json());
+app.use(express.static('dist'));
+
 import cors from 'cors';
 app.use(cors());
 

@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "dev": "ts-node-dev src/index.ts",
-    "start": "node build/index.js",
+    "build": "npm run tsc",
+    "start": "npm run build && node build/index.js",
+    "build:ui": "rm -rf dist && cd ../watchlist-frontend && npm run build && cp -r dist ../watchlist-backend",
     "eslint": "eslint .",
     "tsc": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
