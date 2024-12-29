@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { Movie } from '../types';
 
-const baseUrl = 'http://localhost:3000/api/movies';
+const baseUrl = '/api/movies';
 
 export const getAllMovies = async (): Promise<Movie[]> => {
   const response = await axios.get(baseUrl);

@@ -1,11 +1,11 @@
-import express from 'express';
 import movieRouter from './routes/movies';
+import { PORT } from './utils/config';
+
+import express from 'express';
 const app = express();
 app.use(express.json());
 import cors from 'cors';
 app.use(cors());
-
-const PORT = 3000;
 
 app.get('/ping', (_req, res) => {
   console.log('someone pinged here');
