@@ -12,7 +12,7 @@ Start script: chmod +x ./start_app.sh && ./start_app.sh
 
 ## TODO
 
-### Deployment
+### Configurations
 
 - [x] Initialize backend
 - [x] Initialize frontend
@@ -21,6 +21,8 @@ Start script: chmod +x ./start_app.sh && ./start_app.sh
 - [ ] Add database
 - [ ] Add styling
 - [ ] Add unit testing
+- [ ] Logging
+- [ ] Proper error handling
 
 ### Features
 
