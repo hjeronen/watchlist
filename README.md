@@ -2,9 +2,13 @@
 
 List of all movies you should watch.
 
+Build script: chmod +x ./build_step.sh && ./build_step.sh
+Start script: chmod +x ./start_app.sh && ./start_app.sh
+
 ## TODO
 
 ### Deployment
+
 - [x] Initialize backend
 - [x] Initialize frontend
 - [ ] Deploy to Renderer
@@ -14,7 +18,9 @@ List of all movies you should watch.
 - [ ] Add unit testing
 
 ### Features
+
 - [ ] Mark movie as watched
+- [ ] Delete movie from list
 - [ ] Add users
 - [ ] Fetch movie information from IMDB etc.
 - [ ] Add rating movies
