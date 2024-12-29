@@ -16,7 +16,7 @@ Start script: chmod +x ./start_app.sh && ./start_app.sh
 
 - [x] Initialize backend
 - [x] Initialize frontend
-- [x] Deploy to Renderer
+- [x] Deploy to Render
 - [ ] Set up CI/CD pipeline
 - [ ] Add database
 - [ ] Add styling
@@ -24,6 +24,8 @@ Start script: chmod +x ./start_app.sh && ./start_app.sh
 
 ### Features
 
+- [x] Add movie
+- [x] Show list of movies
 - [ ] Mark movie as watched
 - [ ] Delete movie from list
 - [ ] Separate page for movie details
