@@ -2,6 +2,8 @@
 
 List of all movies you should watch.
 
+Available at: [https://watchlist-ndc2.onrender.com/](https://watchlist-ndc2.onrender.com/)
+
 Build script: chmod +x ./build_step.sh && ./build_step.sh
 Start script: chmod +x ./start_app.sh && ./start_app.sh
 
