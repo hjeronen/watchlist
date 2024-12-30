@@ -21,7 +21,7 @@ Start script: chmod +x ./start_app.sh && ./start_app.sh
 - [x] Deploy to Render
 - [x] Set up CI/CD pipeline
 - [ ] Add database
-- [ ] Add styling
+- [x] Add styling
 - [ ] Add unit testing
 - [x] Request logging
 - [ ] Response logging
