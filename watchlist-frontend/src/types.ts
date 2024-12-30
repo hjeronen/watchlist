@@ -4,7 +4,7 @@ export interface Movie {
   watched: boolean;
 }
 
-export type NewMovie = Omit<Movie, 'id'>;
+export type NewMovie = Omit<Movie, 'id' | 'watched'>;
 
 export type NotificationStyle = 'error';
 
