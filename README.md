@@ -4,6 +4,8 @@ List of all movies you should watch.
 
 Available at: [https://watchlist-ndc2.onrender.com/](https://watchlist-ndc2.onrender.com/) (Free tier, might take a while to start up.)
 
+CI/CD pipeline is configured using GitHub actions.
+
 ### Scripts (for Render)
 
 Build script: chmod +x ./build_step.sh && ./build_step.sh
@@ -17,7 +19,7 @@ Start script: chmod +x ./start_app.sh && ./start_app.sh
 - [x] Initialize backend
 - [x] Initialize frontend
 - [x] Deploy to Render
-- [ ] Set up CI/CD pipeline
+- [x] Set up CI/CD pipeline
 - [ ] Add database
 - [ ] Add styling
 - [ ] Add unit testing
