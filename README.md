@@ -32,8 +32,8 @@ Start script: chmod +x ./start_app.sh && ./start_app.sh
 
 - [x] Add movie
 - [x] Show list of movies
-- [ ] Mark movie as watched
-- [ ] Delete movie from list
+- [x] Mark movie as watched
+- [x] Delete movie from list
 - [ ] Separate page for movie details
 - [ ] Update movie
 - [ ] Add users
