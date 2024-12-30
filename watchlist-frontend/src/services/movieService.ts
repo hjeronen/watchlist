@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { Movie } from '../types';
+import { NewMovie, Movie } from '../types';
 
 const baseUrl = '/api/movies';
 
@@ -8,7 +8,12 @@ export const getAllMovies = async (): Promise<Movie[]> => {
   return response.data;
 };
 
-export const addMovie = async (object: Movie): Promise<Movie> => {
+export const addMovie = async (object: NewMovie): Promise<Movie> => {
   const response = await axios.post(baseUrl, object);
   return response.data;
+};
+
+export const deleteMovie = async (movie: Movie): Promise<number> => {
+  const response = await axios.delete(`${baseUrl}/${movie.id}`);
+  return response.status;
 };

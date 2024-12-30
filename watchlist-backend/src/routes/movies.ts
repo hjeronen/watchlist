@@ -1,11 +1,7 @@
 import express, { type Request, Response } from 'express';
 import movieService from '../services/movieService';
 import type { Movie, NewMovie } from '../types';
-import {
-  errorMiddleware,
-  movieParser,
-  newMovieParser,
-} from '../utils/middleware';
+import { errorMiddleware, newMovieParser } from '../utils/middleware';
 
 const router = express.Router();
 
@@ -22,14 +18,10 @@ router.post(
   }
 );
 
-router.delete(
-  '/',
-  movieParser,
-  (req: Request<unknown, unknown, Movie>, res: Response) => {
-    movieService.deleteMovie(req.body.id);
-    res.status(200);
-  }
-);
+router.delete('/:id', (req: Request, res: Response) => {
+  movieService.deleteMovie(req.params.id);
+  res.status(200).send();
+});
 
 router.use(errorMiddleware);
 

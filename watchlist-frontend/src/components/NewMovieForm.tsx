@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import { Movie } from '../types';
+import { NewMovie } from '../types';
 
 interface NewMovieFormProps {
-  onAddNewMovie: (movie: Movie) => Promise<boolean>;
+  onAddNewMovie: (movie: NewMovie) => Promise<boolean>;
 }
 
 const NewMovieForm = ({ onAddNewMovie }: NewMovieFormProps) => {

@@ -1,6 +1,8 @@
-import { movies } from '../data';
+import { data } from '../data';
 import { Movie, NewMovie } from '../types';
 import { v4 as uuid } from 'uuid';
+
+let movies: Movie[] = data;
 
 const getAllMovies = (): Movie[] => {
   return movies;
@@ -13,8 +15,7 @@ const addMovie = (movie: NewMovie): Movie => {
 };
 
 const deleteMovie = (id: string) => {
-  // TODO: add deleting movies when database is set up
-  console.log(`Deleting ${id}`);
+  movies = movies.filter((movie) => movie.id != id);
 };
 
 export default {
