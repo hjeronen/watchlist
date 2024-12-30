@@ -5,6 +5,7 @@ import {
   addMovie,
   deleteMovie,
   getAllMovies,
+  updateMovie,
 } from '../../services/movieService';
 import type {
   NewMovie,
@@ -46,18 +47,22 @@ const Watchlist = () => {
     }, 4000);
   };
 
+  const handleError = (error: unknown) => {
+    if (axios.isAxiosError(error)) {
+      console.error(error.response?.data);
+      showNotification(`An error occurred: ${error.message}`, 'error');
+    } else {
+      console.error(error);
+    }
+  };
+
   const onAddMovie = async (movie: NewMovie) => {
     try {
       const addedMovie = await addMovie(movie);
       setMovies(movies.concat(addedMovie));
       return true;
     } catch (error: unknown) {
-      if (axios.isAxiosError(error)) {
-        console.error(error.response?.data);
-        showNotification('An error occurred when adding new movie', 'error');
-      } else {
-        console.error(error);
-      }
+      handleError(error);
       return false;
     }
   };
@@ -71,12 +76,20 @@ const Watchlist = () => {
         await loadMovies();
       }
     } catch (error: unknown) {
-      if (axios.isAxiosError(error)) {
-        console.error(error.response?.data);
-        showNotification(`An error occurred: ${error.message}`, 'error');
+      handleError(error);
+    }
+  };
+
+  const toggleWatched = async (movie: Movie) => {
+    try {
+      const status = await updateMovie({ ...movie, watched: !movie.watched });
+      if (status !== 201) {
+        showNotification(`Updating ${movie.title} failed`, 'error');
       } else {
-        console.error(error);
+        await loadMovies();
       }
+    } catch (error: unknown) {
+      handleError(error);
     }
   };
 
@@ -88,7 +101,11 @@ const Watchlist = () => {
       />
       <h2>Movies</h2>
       <NewMovieForm onAddNewMovie={onAddMovie} />
-      <MovieList movies={movies} onDelete={onDeleteMovie} />
+      <MovieList
+        movies={movies}
+        onDelete={onDeleteMovie}
+        toggleWatched={toggleWatched}
+      />
     </div>
   );
 };

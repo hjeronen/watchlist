@@ -7,4 +7,5 @@ export const newMovieSchema = z.object({
 export const movieSchema = z.object({
   id: z.string(),
   title: z.string(),
+  watched: z.boolean(),
 });

@@ -17,3 +17,8 @@ export const deleteMovie = async (movie: Movie): Promise<number> => {
   const response = await axios.delete(`${baseUrl}/${movie.id}`);
   return response.status;
 };
+
+export const updateMovie = async (movie: Movie): Promise<number> => {
+  const response = await axios.put(`${baseUrl}/${movie.id}`, movie);
+  return response.status;
+};

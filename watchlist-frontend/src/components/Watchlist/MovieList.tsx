@@ -4,16 +4,21 @@ import MovieListing from './MovieListing';
 interface MovieListProps {
   movies: Movie[];
   onDelete: (movie: Movie) => void;
+  toggleWatched: (movie: Movie) => void;
 }
 
-const MovieList = ({ movies, onDelete }: MovieListProps) => {
+const MovieList = ({ movies, onDelete, toggleWatched }: MovieListProps) => {
   return (
     <ul>
       {movies && movies.length > 0 ? (
         <div>
           {movies.map((movie, i) => (
             <li key={i}>
-              <MovieListing movie={movie} onDelete={onDelete} />
+              <MovieListing
+                movie={movie}
+                onDelete={onDelete}
+                toggleWatched={toggleWatched}
+              />
             </li>
           ))}
         </div>
