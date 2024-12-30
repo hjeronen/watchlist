@@ -2,7 +2,7 @@
 
 List of all movies you should watch.
 
-Available at: [https://watchlist-ndc2.onrender.com/](https://watchlist-ndc2.onrender.com/)
+Available at: [https://watchlist-ndc2.onrender.com/](https://watchlist-ndc2.onrender.com/) (Free tier, might take a while to start up.)
 
 ### Scripts (for Render)
 
@@ -21,7 +21,9 @@ Start script: chmod +x ./start_app.sh && ./start_app.sh
 - [ ] Add database
 - [ ] Add styling
 - [ ] Add unit testing
-- [ ] Logging
+- [x] Request logging
+- [ ] Response logging
+- [x] Zod schemas and validation
 - [ ] Proper error handling
 
 ### Features
