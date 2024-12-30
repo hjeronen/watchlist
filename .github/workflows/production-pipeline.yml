@@ -32,7 +32,7 @@ jobs:
           npm run eslint
   deploy:
     runs-on: ubuntu-20.04
-    needs: [backend-pipeline, frontend-pipeline]
+    needs: [backend_pipeline, frontend_pipeline]
     steps:
       - name: Deploy
         # Only run this step if the branch is main
