@@ -1,3 +1,4 @@
+import Alert from 'react-bootstrap/esm/Alert';
 import { NotificationStyle } from '../types';
 
 interface NotificationProps {
@@ -6,14 +7,11 @@ interface NotificationProps {
 }
 
 const Notification = ({ message, style }: NotificationProps) => {
-  const error = {
-    border: 'solid',
-    color: 'red',
-  };
-
   return message ? (
-    <div style={style === 'error' ? error : {}}>{message}</div>
-  ) : null;
+    <Alert variant={style}>{message}</Alert>
+  ) : (
+    <div className="alert-placeholder" />
+  );
 };
 
 export default Notification;

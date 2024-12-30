@@ -1,0 +1,39 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar-text {
+  font-style: italic;
+}
+
+.alert {
+  margin: 10px 0 0 0;
+  padding: 10px;
+}
+
+.alert-placeholder {
+  margin: 28px 0 28px 0;
+}
+
+.header-container {
+  padding: 10px 50px 15px 10px;
+}
+
+.list-group-item {
+  display: flex;
+  height: 50px;
+}
+
+.list-text {
+  display: inline-block;
+  text-align: left;
+  margin: 5px 0 0 0;
+}
+
+.list-button {
+  display: inline-block;
+  text-align: center;
+  padding: 0 10px;
+  margin: 0 5px 20px;
+  height: 30px;
+}

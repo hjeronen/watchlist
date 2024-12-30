@@ -6,7 +6,7 @@ export interface Movie {
 
 export type NewMovie = Omit<Movie, 'id' | 'watched'>;
 
-export type NotificationStyle = 'error';
+export type NotificationStyle = 'danger' | 'info' | 'success';
 
 export interface NotificationType {
   message: string;

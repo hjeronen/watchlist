@@ -1,3 +1,4 @@
+import ListGroup from 'react-bootstrap/esm/ListGroup';
 import { Movie } from '../../types';
 import MovieListing from './MovieListing';
 
@@ -9,23 +10,20 @@ interface MovieListProps {
 
 const MovieList = ({ movies, onDelete, toggleWatched }: MovieListProps) => {
   return (
-    <ul>
+    <ListGroup>
       {movies && movies.length > 0 ? (
-        <div>
-          {movies.map((movie, i) => (
-            <li key={i}>
-              <MovieListing
-                movie={movie}
-                onDelete={onDelete}
-                toggleWatched={toggleWatched}
-              />
-            </li>
-          ))}
-        </div>
+        movies.map((movie, i) => (
+          <MovieListing
+            key={i}
+            movie={movie}
+            onDelete={onDelete}
+            toggleWatched={toggleWatched}
+          />
+        ))
       ) : (
         <div>No movies added.</div>
       )}
-    </ul>
+    </ListGroup>
   );
 };
 
